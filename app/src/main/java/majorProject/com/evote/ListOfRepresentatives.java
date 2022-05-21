@@ -28,35 +28,29 @@ public class ListOfRepresentatives extends AppCompatActivity {
     private void initImageBitmaps(){
         Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
 
-        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
-        mNames.add("Havasu Falls");
+        mImageUrls.add("https://risingnepaldaily.com/banner_image/5ffeaf9fc6412_5ffe98550a4c8_sajha-party.jpg");
+        mNames.add("Bibeksheel Sajha Party(विवेकशील साझा पार्टी)");
 
-        mImageUrls.add("https://i.redd.it/tpsnoz5bzo501.jpg");
-        mNames.add("Trondheim");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Flag_of_CPN_%28UML%29.svg/300px-Flag_of_CPN_%28UML%29.svg.png");
+        mNames.add("Nepal Communist Party (NCP)नेपाल कम्युनिष्ट पार्टी (नेकपा)");
 
-        mImageUrls.add("https://i.redd.it/qn7f9oqu7o501.jpg");
-        mNames.add("Portugal");
+        mImageUrls.add("https://i.redd.it/kfevr1oicyh61.jpg");
+        mNames.add("Nepali Congress(नेपाली काँग्रेस)");
 
-        mImageUrls.add("https://i.redd.it/j6myfqglup501.jpg");
-        mNames.add("Rocky Mountain National Park");
+        mImageUrls.add("https://i.redd.it/xxrcsc19cyh61.jpg");
+        mNames.add("Nepal Majdoor Kisan Party(नेपाल मजदुर किसान पार्टी)");
 
-        mImageUrls.add("https://i.redd.it/0h2gm1ix6p501.jpg");
-        mNames.add("Mahahual");
+        mImageUrls.add("https://i.redd.it/egj40drqcyh61.png");
+        mNames.add("People's Socialist Party(जनता समाजवादी पार्टी, नेपाल)");
 
-        mImageUrls.add("https://i.redd.it/k98uzl68eh501.jpg");
-        mNames.add("Frozen Lake");
+        mImageUrls.add("https://i.redd.it/hfngb8e0dyh61.png");
+        mNames.add("Rastriya Janamorcha(राष्ट्रिय जनमोर्चा)");
 
-        mImageUrls.add("https://i.redd.it/glin0nwndo501.jpg");
-        mNames.add("White Sands Desert");
+        mImageUrls.add("https://i.redd.it/wt7vp1j5dyh61.jpg");
+        mNames.add("Rastriya Janamukti Party(राष्ट्रिय जनमुक्ति पार्टी)");
 
-        mImageUrls.add("https://i.redd.it/obx4zydshg601.jpg");
-        mNames.add("Austrailia");
-
-        mImageUrls.add("https://i.imgur.com/ZcLLrkY.jpg");
-        mNames.add("Washington");
-
-        mImageUrls.add("https://www.google.com/search?q=nepali+congress+nepal&sxsrf=ALeKk03bNokKRFrPf0L9tobeCz_A2YyalA:1583039592823&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi7qOGEwvjnAhUBfH0KHSR-DSkQ_AUoAXoECCIQAw&biw=1536&bih=751#imgrc=bVAhwUJmroKhdM");
-        mNames.add("congress");
+        mImageUrls.add("https://i.redd.it/o6sqn13wdyh61.png");
+        mNames.add("Rastriya Prajatantra Party(राष्ट्रिय प्रजातन्त्र पार्टी)");
 
         initRecyclerView();
     }

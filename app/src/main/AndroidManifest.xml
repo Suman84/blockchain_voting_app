@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="majorProject.com.evote">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,10 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewVotes"></activity>
-        <activity android:name=".Registration" />
-        <activity android:name=".AdminDashboard" />
-        <activity android:name=".LoginScreen" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +23,7 @@
         </activity>
         <activity android:name=".GalleryActivity" />
         <activity android:name=".ListOfRepresentatives" />
+        <activity android:name=".Scanner" />
     </application>
 
 </manifest>

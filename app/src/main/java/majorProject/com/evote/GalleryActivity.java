@@ -1,5 +1,6 @@
 package majorProject.com.evote;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -19,6 +20,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.Scanner;
 
 /**
  * Created by User on 1/2/2018.
@@ -45,60 +48,22 @@ public class GalleryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(GalleryActivity.this,"Connecting . . . ", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(GalleryActivity.this, "Connecting . . . ", Toast.LENGTH_SHORT).show();
                 final String imageName = getIntent().getStringExtra("image_name");
-                Rootnode = FirebaseDatabase.getInstance();
-                reference = Rootnode.getReference("representatives").child(imageName);
-                //reference.setValue("0");
+                final String canNum = getIntent().getStringExtra("candidatenumber");
 
-                DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference("Users");
-                reference1.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                        String userEmail = user.getEmail();
-                        int beforeAt = userEmail.indexOf("@");
-                        String subEmail = userEmail.substring(0,beforeAt);
-                        String isitvoted = dataSnapshot.child(subEmail).getValue(String.class);
+                Toast.makeText(GalleryActivity.this, "yoo    "+ imageName + "     "+ canNum, Toast.LENGTH_SHORT).show();
 
-                        if(isitvoted.equals("voted"))
-                        {
-                            Toast.makeText(GalleryActivity.this,"User already voted! ", Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                                Toast.makeText(GalleryActivity.this,"voting.... ", Toast.LENGTH_SHORT).show();
-                                reference = Rootnode.getReference("Users").child(subEmail);
-                                reference.setValue("voted");
+                startActivity(new Intent(getApplicationContext(), Scanner.class));
 
-                            DatabaseReference reference2 = FirebaseDatabase.getInstance().getReference("representatives");
-                            reference2.addListenerForSingleValueEvent(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                                    final String imageName = getIntent().getStringExtra("image_name");
-                                    String NoofVotes = dataSnapshot.child(imageName).getValue(String.class);
-                                    int noofvotes = Integer.parseInt(NoofVotes);
-                                    noofvotes++;
-                                    NoofVotes = String.valueOf(noofvotes);
-                                    DatabaseReference reference3 = Rootnode.getReference("representatives").child(imageName);
-                                    reference3.setValue(NoofVotes);
-                                    Toast.makeText(GalleryActivity.this,"Voting Successful ", Toast.LENGTH_SHORT).show();
-                                }
 
-                                @Override
-                                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                                }
-                            });
 
-                        }
-                    }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                    }
-                });
+
+
 
             }
         });
@@ -114,6 +79,7 @@ public class GalleryActivity extends AppCompatActivity {
 
             String imageUrl = getIntent().getStringExtra("image_url");
             String imageName = getIntent().getStringExtra("image_name");
+            String CandidateNumber = getIntent().getStringExtra("candidatenumber");
             setImage(imageUrl, imageName);
         }
 

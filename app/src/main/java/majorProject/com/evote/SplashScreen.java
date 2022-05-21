@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import java.util.Scanner;
+
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -18,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
 
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), LoginScreen.class));
+                startActivity(new Intent(getApplicationContext(), ListOfRepresentatives.class));
 
             }
         },2000);
