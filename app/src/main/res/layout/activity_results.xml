@@ -23,55 +23,37 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SUBMIT PRIVATE KEY OR SCAN QR CODE"
-                android:textSize="40dp" />
+                android:text="VOTING: ON PROGRESS"
+                android:textSize="30dp" />
+
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enter PIN"
+                android:layout_marginTop="100dp"
+                android:text="Your Status:"
                 android:textSize="20dp" />
 
-            <EditText
-                android:id="@+id/pin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number"
-                android:text="" />
 
+
+            <Button
+                android:id="@+id/buttonproceed"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/button_rounded"
+                android:text="Proceed"
+                android:textColor="#ffff" />
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enter Private Key"
-                android:textSize="20dp" />
+                android:text="1"
+                android:textSize="1dp" />
 
-            <EditText
-                android:id="@+id/privateKey"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="" />
 
-            <Button
-                android:id="@+id/submitPK"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/button_rounded"
-                android:text="VOTE USING PRIVATE KEY"
-                android:textColor="#ffff" />
-            <Button
-                android:id="@+id/scanButton"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="100dp"
-                android:background="@drawable/button_rounded"
-                android:text="VOTE USING QR CODE"
-                android:textColor="#ffff" />
+
 
 
         </LinearLayout>
