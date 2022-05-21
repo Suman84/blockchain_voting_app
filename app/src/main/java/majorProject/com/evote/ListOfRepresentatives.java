@@ -55,13 +55,19 @@ public class ListOfRepresentatives extends AppCompatActivity {
         mImageUrls.add("https://i.imgur.com/ZcLLrkY.jpg");
         mNames.add("Washington");
 
+        mImageUrls.add("https://www.google.com/search?q=nepali+congress+nepal&sxsrf=ALeKk03bNokKRFrPf0L9tobeCz_A2YyalA:1583039592823&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi7qOGEwvjnAhUBfH0KHSR-DSkQ_AUoAXoECCIQAw&biw=1536&bih=751#imgrc=bVAhwUJmroKhdM");
+        mNames.add("congress");
+
         initRecyclerView();
     }
 
     private void initRecyclerView(){
+
+        String data = getIntent().getStringExtra("string");
+
         Log.d(TAG, "initRecyclerView: init recyclerview.");
         RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mNames, mImageUrls);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mNames , mImageUrls);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

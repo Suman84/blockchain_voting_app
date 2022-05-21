@@ -42,6 +42,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return holder;
     }
 
+
+
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder: called.");
@@ -60,9 +62,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                 Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
 
+
+
                 Intent intent = new Intent(mContext, GalleryActivity.class);
+
+                String value = intent.getStringExtra("string");
                 intent.putExtra("image_url", mImages.get(position));
                 intent.putExtra("image_name", mImageNames.get(position));
+                intent.putExtra("email", value);
+
                 mContext.startActivity(intent);
             }
         });
