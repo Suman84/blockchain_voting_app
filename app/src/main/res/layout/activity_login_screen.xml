@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="majorProject.com.evote.LoginScreen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp"
+            tools:context=".Login_Form">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="351dp"
+                android:layout_height="219dp"
+                app:srcCompat="@drawable/evoting" />
+
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="Email: "
+                android:inputType="text"
+                android:textSize="20sp"
+                android:id="@+id/EmailLog"
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="Password: "
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                android:id="@+id/PasswordLog"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:text="Login "
+                android:background="@drawable/button_rounded"
+                android:textColor="#ffff"
+                android:textSize="20sp"
+                android:id="@+id/Login" />
+
+
+        </LinearLayout>
+
+        />
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
