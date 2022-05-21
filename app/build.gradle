@@ -48,4 +48,6 @@ dependencies {
     //circle imageview
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
+    implementation 'org.web3j:core:4.1.0-android'
+
 }

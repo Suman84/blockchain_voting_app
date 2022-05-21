@@ -26,14 +26,25 @@ http://schemas.android.com/apk/res/android">
         android:textSize="20sp"
         android:textColor="#000" />
 
+    <TextView
+        android:id="@+id/totalVotes"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_height="38dp"
+        android:textSize="20sp"
+        android:text=" Total votes: "
+        android:textColor="#000"/>
+
+
     <Button
+
+
         android:id="@+id/buttonvote"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
         android:background="@drawable/button_rounded"
-        android:textColor="#ffff"
-
-        android:text="VOTE" />
+        android:text="VOTE"
+        android:textColor="#ffff" />
 
 </LinearLayout>
